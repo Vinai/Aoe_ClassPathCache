@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Aoe_ClassPathCache>
-			<active>true</active>
+			<active>false</active>
 			<codePool>local</codePool>
 		</Aoe_ClassPathCache>
 	</modules>
