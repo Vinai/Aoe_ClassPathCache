@@ -251,7 +251,7 @@ class Varien_Autoload
                 }
             } else {
                 $fileContent = serialize(self::$_cache);
-                $tmpFile = tempnam(sys_get_temp_dir(), 'aoe_classpathcache');
+                $tmpFile = tempnam(Mage::getBaseDir('cache'), 'aoe_classpathcache') . '.tmp';
                 if (file_put_contents($tmpFile, $fileContent)) {
                     if (rename($tmpFile, self::getCacheFilePath())) {
                         @chmod(self::getCacheFilePath(), 0664);
